@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" name="csvfile">
+            <input type="submit" name="" id="" value="submit">
+        </form>
+    </div>
+    <br>
+    <div>
+        <table class="table table-striped table-sm">
+            <thead>
+                {% for header in data_top %}
+                    <tr>
+                        <th>{{ header }}</th>
+                        
+                    </tr>
+                {% endfor %}
+              <!-- <tr>
+                <th>Employee ID</th>
+                <th>Target Revenue</th>
+                <th></th>
+                <th>Closing Date</th>
+              </tr> -->
+            </thead>
+            <tbody>
+              {% for value in tablelist %}
+              <tr>
+                <td>{{ value[0] }}</td>
+                <td>{{ value[1] }}</td>
+                <td>{{ value[2] }}</td>
+                <td>{{ value[3] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
